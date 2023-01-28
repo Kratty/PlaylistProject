@@ -12,10 +12,14 @@ public class PlaylistTester
         Playlist play = new Playlist();
         Song One = new Song("baba", "Theodore", 80, true);
         play.addSong(One);
-        Song Two = new Song("bebe", "Paul", 20, false);
+        Song Two = new Song("bebe", "Paul", 20);
+        Song Three = new Song("chebe", "Snuggles", 270);
         play.addSong(Two);
+        play.addSong(Three);
         System.out.println(play.view());
-        play.like(Two);
+        play.like(Three);
+        System.out.println(play.viewLiked());
         System.out.println(play.view());
+        System.out.println("Total time: "+play.getDuration());
     }
 }

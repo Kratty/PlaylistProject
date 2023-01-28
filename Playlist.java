@@ -67,7 +67,7 @@ public class Playlist
             ("| "+ playlist.get(i).getTitle());
             view+=(" by ");
             view+=playlist.get(i).getArtist();
-            view+=(" " + playlist.get(i).getDuration() + "|");
+            view+=(" " + playlist.get(i).getDuration() + " |");
             if (playlist.get(i).isLiked())
             {
                 view+=" - Liked ";
@@ -75,5 +75,38 @@ public class Playlist
             view+="\n";
         }  
         return view;
+    }
+    
+    public String viewLiked()
+    {
+        String view = "";
+        for (int i = 0; i< playlist.size(); i++)
+        {
+            if (playlist.get(i).isLiked())
+            {
+                view += 
+                ("| "+ playlist.get(i).getTitle());
+                view+=(" by ");
+                view+=playlist.get(i).getArtist();
+                view+=(" " + playlist.get(i).getDuration() + " |");
+                view+="\n";
+            }
+        }  
+        return view;
+    }
+    
+    public String getDuration()
+    {
+        int sum = 0;
+        for (int i = 0; i< playlist.size(); i++)
+        {
+           sum += (playlist.get(i).getDMiN()*60) + playlist.get(i).getDSeC();
+        }  
+        //assuming no playlist over an hour. people like minutes only anyways XD
+        int durationMin = (int)(sum/60);
+        int durationSec = sum - (durationMin*60);
+        
+        String timeString = durationMin + ":" + durationSec;
+        return timeString;
     }
 }

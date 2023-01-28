@@ -96,6 +96,24 @@ public class Song
         return timeString;
     }
     
+    /**
+     * This method will return duration
+     * @return    the duration duration
+     */
+    public int getDMiN()
+    {
+        return durationMin;
+    }
+    
+    /**
+     * This method will return duration
+     * @return    the duration duration
+     */
+    public int getDSeC()
+    {
+        return durationSec;
+    }
+    
     public void like()
     {
         like = true;
