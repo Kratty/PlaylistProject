@@ -109,4 +109,32 @@ public class Playlist
         String timeString = durationMin + ":" + durationSec;
         return timeString;
     }
+    
+    public void removeDisliked()
+    {
+        ArrayList<Song> theNew = new ArrayList<Song>();
+        for (int i = 0; i< playlist.size(); i++)
+        {
+           if (playlist.get(i).isLiked())
+           {
+               theNew.add(playlist.get(i));
+               //System.out.println(playlist.get(i).getTitle());
+            }
+        }
+        
+        playlist.clear();
+        /*
+        for (int i = 0; i <= playlist.size(); i++)
+        {   
+            playlist.remove(0);
+        }
+        */
+        
+        for (int i = 0; i < theNew.size(); i++)
+        {
+            playlist.add(theNew.get(i));
+        }
+        
+        
+    }
 }
