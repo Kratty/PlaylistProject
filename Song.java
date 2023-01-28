@@ -96,5 +96,18 @@ public class Song
         return timeString;
     }
     
+    public void like()
+    {
+        like = true;
+    }
     
+    public void dislike()
+    {
+        like = false;
+    }
+    
+    public Boolean isLiked()
+    {
+        return like;
+    }
 }
