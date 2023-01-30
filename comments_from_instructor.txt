@@ -1,0 +1,14 @@
+
+/*
+
+COMMENTS FROM THE INSTRUCTOR:
+
+Solid work on this project, Theodore. Really well done, and you
+even got a .gitignore file working in here, just as needed.
+
+Well done!
+
+SCORE: 20/20
+
+*/
+
